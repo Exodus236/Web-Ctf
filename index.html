@@ -1,0 +1,79 @@
+<DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <title>Entrada KOTC</title>    
+        <meta charset="utf-8">
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="css/estilo.css" media="screen" />
+        <script src="dist/bundle.js"></script>
+  <script> 
+ 
+        
+
+        var message="";
+
+            function clickIE() {if (document.all) {(message);return false;}}
+            function clickNS(e) {if
+            (document.layers||(document.getElementById&&!document.all)) {
+            if (e.which==2||e.which==3) {(message);return false;}}}
+            if (document.layers)
+            {document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;}
+            else{document.onmouseup=clickNS;document.oncontextmenu=clickIE;}
+
+            document.oncontextmenu=new Function("return false")
+
+
+
+            document.onkeypress = function (event) {
+            if (e.ctrlKey &&
+                (e.keyCode === 123)) {
+                    return false;
+                }
+            };
+
+
+            document.onkeydown = function(e) {
+            if (e.ctrlKey &&
+            (e.keyCode === 85)) {
+                return false;
+                }
+            };  
+
+            var pergunta=prompt("Ola, quer conhecer um pouco da nossa historia ? ")
+
+            function interval(){
+                window.alert("Seja bem vindo a KOTC <3 ")
+            }
+
+        if (pergunta === 'Diguidim'){
+            window.alert("Não Conseguiu bb , tente novamente mais tarde :( ")
+            window.location.href='principal.php'
+        } else{
+                interval()
+                window.location.href="https://www.youtube.com/watch?v=N1PFETbX_1U"
+        window.location.href="https://www.youtube.com/watch?v=N1PFETbX_1U"
+        } 
+
+
+    </script>
+    </head>
+    <body>
+        <h1 id="kotc"></h1>
+        
+            <header id="cabecalho">
+                <img id="imagem-cabecalho" src="imagens/favicon.jpg" width="100%px" height="100px">
+               
+            
+    
+
+            </header>
+            
+
+
+</body>
+
+</html>
+
+
+
+
