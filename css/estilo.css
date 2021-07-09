@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 27vh 1fr 400px;
+    grid-template-areas: "header" "main" "footer";
+}
+
+/* Cabeçalho */
+
+header {
+    grid-area: header;
+}
+
+header img {
+    width: 100%;
+    height: 100%;
+}
+
+/*----------->FRAMES<--------------*/
+
+@keyframes letras{
+
+    from{
+        color: #a08c33;
+    }
+    to{
+        color: whitesmoke;
+    }
+}
+
+@keyframes enviar{
+    from{
+            color:#fff;
+    }
+    to{
+        color:black;
+    }
+}
+
+
+/* ---------->Cabeçalhos e menus<-------------*/
+#cabecalho{
+    padding-top:0px;
+    padding-bottom:0px;
+}
+
+#imagem-cabecalho{
+    height:50%;
+    width:100%;
+    z-index: 1;
+    position: relative;
+    border: 1px solid rgb(141, 106, 77);
+}
+
+
+
+#menu{
+    margin-top: 15px;
+    z-index:3;
+    position: absolute;
+    float: right;
+    line-height: right;
+}
+
+#cafe{
+    float:right;
+    position:absolute;
+    width:100%;
+    height: 100%;
+}
+
+#navicon {
+	display:none;
+    width:100% ;
+    height:100% ;
+}
+#navicon:checked ~ .sidebar {
+	visibility: visible;
+	opacity: 1;
+}
+
+#navicon:checked ~ .nav-toggle > .hamburger span:nth-child(1) {
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+}
+#navicon:checked ~ .nav-toggle > .hamburger span:nth-child(2) {
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+}
+#navicon:checked ~ .nav-toggle > .hamburger span:nth-child(3) {
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+}
+
+main {
+    grid-area: main;
+    padding: 5rem;
+    background:rgba(202, 196, 196, 0.76);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    margin-top: 1rem;
+}
+
+.h1{
+    justify-self: end;
+}
+
+section {
+    width: 70%;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    background:#d6c083;
+}
+
+.historia{
+    padding: 1rem;
+}
+
+.img-a {
+   
+    width: 40%;
+    margin: 1rem;
+    height: 220px;
+    border-radius: 1rem;
+}
+
+#img-b {
+    width: 40%;
+    margin: 1rem;
+    height: 520px;
+    border-radius: 1rem;
+}
+
+/*-------------->Classes cabeçalho<--------------*/
+
+.nav-toggle {
+	display: inline-block;
+	padding: 10px 10px 15px 10px;
+	background: rgba(141, 106, 77, 0.397);
+	position: fixed;
+	top: 0px;
+	left: 1px;
+	z-index: 51;
+    height:6%;
+    width:4%;
+}
+
+.hamburger {
+	width: 1.5em;
+	position: relative;
+	display: inline-block;
+	height: 0.6em;
+	font-size: 1.2em;
+}
+.hamburger span {
+	width: 100%;
+	background: rgb(150, 73, 29);	
+	position: absolute;
+	left: 3%;
+	height: 0.185em;
+	border-radius: 1.2px;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-ms-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+}
+.hamburger span:nth-child(1) {
+	left: -19%;
+    width:130%;
+    height:200%;
+}
+.hamburger span:nth-child(2) {
+	top: 0.36em;
+}
+.hamburger span:nth-child(3) {
+	top: 0.73em;
+}
+.sidebar {
+	width: 13%;	
+	position: fixed;
+	background: rgba(92, 75, 49, 0.534);
+	top: 0;
+	left: 3;
+	z-index: 1;
+	visibility: hidden;
+	opacity: 1;
+	transition: 0.4s all;
+    border-radius: 20px 20px 20px 20px;
+	-webkit-transition: 0.2s all;
+	-ms-transition: 0.2s all;
+	-moz-transition: 0.2s all;
+	-o-transition: 0.2s all;
+    
+}
+
+
+ul#navegacao{
+    float:left;
+}
+
+ul#navegacao a{
+    display: inline;
+    clear: both;
+    margin-left: 72%;
+    padding-top:0.5%;
+    font-size: 0.9em;
+    margin-top: 29%;
+    line-height: 15px;
+    text-decoration: none;
+    color: #a08c33;
+    float: left;
+    text-transform: uppercase;
+    /*background-color:pink ;*/
+    border-radius:15px; 
+    
+}
+
+ul#navegacao a:hover{
+    color:white;
+    cursor: pointer;
+    animation-name:letras;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/* Rodape */
+
+footer {
+    grid-area: footer;
+    background:#d6c083;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+form > p{
+    letter-spacing: -1px;
+    font-size: 0.7rem;
+    margin-top: 1rem;
+    text-align: right;
+    font-weight: 700;
+}
+
+form {
+    background: rgba(255, 255, 255);
+    padding: 2rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    margin: 27px 0;
+    height: 325px;
+    width: 300px;
+}
+
+form > h2 {
+    margin-bottom: 1rem;
+    letter-spacing: -1px;
+    font-size: 20px;
+}
+
+form > h2:hover {
+    letter-spacing: 0.5px;
+    color:rgba(110, 89, 19, 0.7);
+}
+
+.input-field {
+    margin-bottom: 0.5rem;
+    position: relative;
+    outline: none;
+}
+
+.input-field .underline::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.input-field .underline::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background:linear-gradient(45deg, rgba(110, 89, 19, 0.7),rgba(156, 134, 59, 0.7));
+    transform: scaleX(0);
+    transition: all .3s ease-in-out;
+}
+
+.input-field input:focus ~ .underline::after {
+    transform: scaleX(1);
+}
+
+.input-field input::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+#descricao textarea:focus {
+    background:linear-gradient(45deg, rgba(110, 89, 19, 0.5),rgba(156, 134, 59, 0.2));
+}
+.conteudo-meio{
+    margin-left: 0%;
+    font-family:Georgia, serif;
+    font-size:1.5em;
+
+}
+
+form > button {
+    margin-top: 1rem;
+    padding: 0.4rem;
+    cursor: pointer;
+    background: rgba(2, 2, 2, 0.8);
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 300;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    
+}
+
+form > button:hover {
+    letter-spacing: 0.5px;
+    background:linear-gradient(45deg, rgba(110, 89, 19, 0.7),rgba(156, 134, 59, 0.7));
+}
+
+form > p{
+    font-size: 12px;
+}
+
+form > p:hover {
+    color:rgb(129, 105, 24);
+}
+
+#rodape {
+    text-align: center;
+    justify-content: end;
+}
+
+
+
